@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhaleCrunch · Still swimming</title>
+<meta name="description" content="WhaleCrunch is still swimming towards launch. Bytes by bytes, we crunch it right. An Avernixx product, coming soon.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="WhaleCrunch · Still swimming">
+<meta property="og:description" content="Our whale is still swimming towards launch. Surfacing soon.">
+<meta property="og:image" content="https://whalecrunch.ai/icon-192.png">
+<meta name="theme-color" content="#0B3B6E">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#E0F4FF; --sea1:#38BDF8; --sea2:#0B6BB8; --deep:#0B3B6E; --ink:#0B2340; --foam:#FFFFFF; --sun:#FDE047;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--foam);overflow:hidden;
+  background:linear-gradient(180deg,var(--sky) 0%,#BDE7FF 22%,var(--sea1) 23%,var(--sea2) 60%,var(--deep) 100%)}
+.sun{position:absolute;right:8vw;top:5vh;width:84px;height:84px;border-radius:50%;background:var(--sun);box-shadow:0 0 60px 20px rgba(253,224,71,.45)}
+.cloud{position:absolute;top:7vh;height:34px;width:120px;background:#fff;border-radius:40px;opacity:.9;animation:drift 60s linear infinite}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud:before{width:54px;height:54px;left:16px;top:-26px}.cloud:after{width:40px;height:40px;left:58px;top:-18px}
+.c2{top:13vh;transform:scale(.7);animation-duration:85s;animation-delay:-40s}
+@keyframes drift{from{left:-160px}to{left:110vw}}
+/* surface waves */
+.waves{position:absolute;left:0;right:0;top:calc(23% - 28px);height:56px;overflow:hidden}
+.waves svg{position:absolute;width:200%;height:100%;animation:wave 9s linear infinite}
+.waves svg.b{opacity:.5;animation-duration:14s;animation-direction:reverse}
+@keyframes wave{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* the swimmer */
+.lane{position:absolute;left:0;right:0;top:27%;height:240px}
+.swimmer{position:absolute;top:0;left:-340px;width:250px;animation:swim 22s linear infinite;animation-delay:-4s}
+.swimmer img{width:100%;display:block;animation:bob 2.4s ease-in-out infinite;filter:drop-shadow(0 18px 18px rgba(0,0,0,.18))}
+@keyframes swim{0%{left:-340px;transform:scaleX(1)}49.9%{left:calc(100vw + 40px);transform:scaleX(1)}50%{left:calc(100vw + 40px);transform:scaleX(-1)}100%{left:-340px;transform:scaleX(-1)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-22px) rotate(3deg)}}
+.bubble{position:absolute;bottom:-30px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.7),rgba(255,255,255,.08) 60%);animation:rise linear infinite}
+@keyframes rise{from{transform:translateY(0) translateX(0);opacity:0}10%{opacity:1}to{transform:translateY(-78vh) translateX(30px);opacity:0}}
+/* copy */
+.card{position:absolute;left:50%;bottom:8vh;transform:translateX(-50%);width:min(680px,calc(100% - 32px));text-align:center}
+h1{font-family:"Baloo 2",Nunito,sans-serif;font-weight:800;font-size:clamp(40px,8vw,84px);line-height:1;margin:0;text-shadow:0 6px 0 rgba(11,35,64,.35)}
+h1 span{display:inline-block;animation:wiggle 1.6s ease-in-out infinite}
+h1 span:nth-child(2){animation-delay:.15s}h1 span:nth-child(3){animation-delay:.3s}
+@keyframes wiggle{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.tag{font-size:clamp(17px,2.6vw,22px);font-weight:700;margin:16px 0 0;opacity:.96}
+.ticker{margin-top:14px;min-height:28px;font-size:clamp(15px,2.2vw,18px);font-weight:600;color:#CFF2FF}
+.ticker b{color:var(--sun)}
+.foot{margin-top:22px;font-size:14px;color:#BFE6FF}
+.foot a{color:#fff;font-weight:700}
+.badge{display:inline-block;background:rgba(11,35,64,.45);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+@media (max-width:600px){.lane{top:25%}.swimmer{width:170px;left:-200px}.sun{width:56px;height:56px}.card{bottom:4vh}.badge{font-size:11px}.tag{margin-top:10px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.swimmer{left:50%;transform:translateX(-50%)}}
+</style>
+</head>
+<body>
+<div class="sun" aria-hidden="true"></div>
+<div class="cloud" aria-hidden="true"></div><div class="cloud c2" aria-hidden="true"></div>
+<div class="waves" aria-hidden="true">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0 28 Q 90 0 180 28 T 360 28 T 540 28 T 720 28 T 900 28 T 1080 28 T 1260 28 T 1440 28 V56 H0Z" fill="#38BDF8"/></svg>
+  <svg class="b" viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0 34 Q 90 8 180 34 T 360 34 T 540 34 T 720 34 T 900 34 T 1080 34 T 1260 34 T 1440 34 V56 H0Z" fill="#7DD3FC"/></svg>
+</div>
+<div class="lane"><div class="swimmer"><img src="whale.png" alt="The WhaleCrunch whale, swimming"></div></div>
+<div id="bubbles" aria-hidden="true"></div>
+<main class="card">
+  <div class="badge">WhaleCrunch · coming soon</div>
+  <h1><span>Still</span> <span>swimming</span><span>…</span></h1>
+  <p class="tag">Our whale is crunching bytes deep underwater. We'll surface soon.</p>
+  <p class="ticker" id="ticker" aria-live="polite"><b>Status:</b> holding our breath for launch</p>
+  <p class="foot">Bytes by bytes, we crunch it right. An <a href="https://www.avernixx.com" rel="noopener">Avernixx</a> product · <a href="mailto:ai@avernixx.com">ai@avernixx.com</a></p>
+</main>
+<script>
+// bubbles
+const box=document.getElementById('bubbles');
+for(let i=0;i<18;i++){const b=document.createElement('div');b.className='bubble';const s=8+Math.random()*22;
+b.style.width=b.style.height=s+'px';b.style.left=Math.random()*100+'vw';b.style.animationDuration=(7+Math.random()*9)+'s';b.style.animationDelay=(-Math.random()*14)+'s';box.appendChild(b);}
+// rotating status lines
+const lines=["holding our breath for launch","20,000 bytes under the sea","please do not feed the whale","practising our big splash","crunching bytes, one krill at a time","surfacing soon. Bring a towel."];
+let i=0;const t=document.getElementById('ticker');
+setInterval(()=>{i=(i+1)%lines.length;t.innerHTML='<b>Status:</b> '+lines[i];},3200);
+</script>
+</body>
+</html>
